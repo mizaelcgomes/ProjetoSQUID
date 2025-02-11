@@ -37,20 +37,6 @@ sudo systemctl status squid
 
 ---
 
-## 🕵️ Monitoramento e Logs
-
-**Acompanhar logs de acesso em tempo real:**
-```bash
-tail -f /var/log/squid/access.log
-```
-
-**Verificar erros recentes:**
-```bash
-grep 'ERROR' /var/log/squid/cache.log
-```
-
----
-
 ## 🔄 Exemplo de Regra de ACL
 Adicione no `squid.conf`:
 ```conf
