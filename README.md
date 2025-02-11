@@ -36,10 +36,3 @@ sudo systemctl status squid
 ```
 
 ---
-
-## 🔄 Exemplo de Regra de ACL
-Adicione no `squid.conf`:
-```conf
-acl minha_rede src 192.168.1.0/24
-http_access allow minha_rede
-```
