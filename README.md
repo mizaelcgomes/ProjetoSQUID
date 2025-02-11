@@ -1,2 +1,62 @@
 # ProjetoSQUID
 PROJETO SQUID - CONTROLE DE ACESSO E MONITORAMENTO DE NAVEGAÇÃO
+
+# Meus Comandos do Squid 🦑
+
+Coleção de comandos úteis para gerenciar o Squid Proxy.
+
+---
+
+## 🔧 Instalação e Configuração Básica
+
+**Instalar o Squid no Ubuntu/Debian:**
+```bash
+sudo apt update && sudo apt install squid -y
+```
+
+**Editar o arquivo de configuração principal:**
+```bash
+sudo nano /etc/squid/squid.conf
+```
+
+---
+
+## 🚀 Comandos de Gerenciamento do Serviço
+
+**Iniciar o Squid:**
+```bash
+sudo systemctl start squid
+```
+
+**Reiniciar após alterações:**
+```bash
+sudo systemctl restart squid
+```
+
+**Verificar status:**
+```bash
+sudo systemctl status squid
+```
+
+---
+
+## 🕵️ Monitoramento e Logs
+
+**Acompanhar logs de acesso em tempo real:**
+```bash
+tail -f /var/log/squid/access.log
+```
+
+**Verificar erros recentes:**
+```bash
+grep 'ERROR' /var/log/squid/cache.log
+```
+
+---
+
+## 🔄 Exemplo de Regra de ACL
+Adicione no `squid.conf`:
+```conf
+acl minha_rede src 192.168.1.0/24
+http_access allow minha_rede
+```
