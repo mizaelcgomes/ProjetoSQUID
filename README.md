@@ -1,9 +1,6 @@
-# ProjetoSQUID
-PROJETO SQUID - CONTROLE DE ACESSO E MONITORAMENTO DE NAVEGAÇÃO
+# Comandos do Projeto Squid 🦑
 
-# Meus Comandos do Squid 🦑
-
-Coleção de comandos úteis para gerenciar o Squid Proxy.
+Comando necessários para dar seguimento ao projeto.
 
 ---
 
