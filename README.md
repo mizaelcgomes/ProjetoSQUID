@@ -1,4 +1,4 @@
-# Comandos do Projeto Squid 🦑
+# COMANDOS DO PROJETO SQUID 🦑
 
 Comando necessários para dar seguimento ao projeto.
 
