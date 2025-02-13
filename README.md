@@ -36,3 +36,24 @@ sudo systemctl status squid
 ```
 
 ---
+🔒 Bloqueio de Sites de Apostas/Adultos(ACL)
+
+Adicione no `squid.conf` para bloquear URLs listadas em um arquivo externo:
+
+```squidconf
+# Bloqueia domínios listados em /etc/squid/bloqueio_bets.txt
+acl bloqueio_bets_adultos url_regex -i "/etc/squid/bloqueio_bets.txt"
+http_access deny bloqueio_bets_adultos
+http_access allow all
+```
+
+### Observações:
+1. Crie o arquivo `bloqueio_bets.txt` com um URL por linha (exemplo do arquivo):
+   ```
+   .apostas.
+   .bet.
+   .adulto.
+   /conteudo-proibido/
+   ```
+2. A opção `-i` torna a regex case-insensitive (ignora maiúsculas/minúsculas).
+3. A ordem das regras é crítica: **sempre negue antes de permitir**.
