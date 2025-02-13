@@ -46,8 +46,7 @@ http_access deny bloqueio_bets_adultos
 http_access allow all
 ```
 ### Observações:
-Crie o arquivo `bloqueio_bets_adultos.txt` com um URL por linha no diretório `/etc/squid/` do servidor.:
-[Lista dos Sites](https://dontpad.com/bloqueio_sites_bets_adultos).
+Crie o arquivo `bloqueio_bets_adultos.txt` com um URL por linha no diretório `/etc/squid/` do servidor: [Lista dos Sites](https://dontpad.com/bloqueio_sites_bets_adultos).
 
 ⚠️ **Requisito**: Sempre que adicionar um ACL, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
 
