@@ -41,7 +41,6 @@ sudo systemctl status squid
 Adicione no `squid.conf` para bloquear URLs listadas em um arquivo externo:
 
 ```squidconf
-# Bloqueia domínios listados em /etc/squid/bloqueio_bets.txt
 acl bloqueio_bets_adultos url_regex -i "/etc/squid/bloqueio_bets_adultos.txt"
 http_access deny bloqueio_bets_adultos
 http_access allow all
