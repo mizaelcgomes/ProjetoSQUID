@@ -71,10 +71,10 @@ deny_info https://www.acesso-proibido.netlify.app bloqueio_bets_adultos
 Adicione no `squid.conf` a partir da linha 2114(utilize `Ctrl` + `/` para encontrar)
 ```squidconf
 # Formato personalizado para logs de bloqueio
-logformat acblock_log %>a %ui %un [%{%Y-%m-%d %H:%M:%S}tl] "%rm %ru HTTP/%rv" %Hs %<st "%{Referer}>h" "%{User-Agent}>h"
+logformat logblock %>a %ui %un [%{%Y-%m-%d %H:%M:%S}tl] "%rm %ru HTTP/%rv" %Hs %<st "%{Referer}>h" "%{User-Agent}>h"
 
 # Arquivo dedicado para registrar acessos bloqueados
-access_log /var/log/squid/log_acblock acblock_log
+access_log /var/log/squid/log_acblock logblock
 ```
 
 Comandos para Implementação no Servidor:
@@ -94,7 +94,7 @@ tail -f /var/log/squid/log_acblock
 
 
 ### Observações:
-**Estrutura do Log**:
+Estrutura do Log:
    - `%>a:` Endereço IP do cliente
    - `%ui:` Identificação do usuário (se disponível)
    - `%un:` Nome do usuário autenticado
