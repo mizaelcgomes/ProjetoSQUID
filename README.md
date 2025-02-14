@@ -36,6 +36,7 @@ sudo systemctl status squid
 ```
 
 ---
+---
 ## 🔒 Bloqueio de Sites de Apostas/Adultos(ACL)
 
 Adicione no `squid.conf` a partir da linha 1544(utilize `Ctrl` + `/` para encontrar) para bloquear URLs listadas em um arquivo externo:
@@ -52,6 +53,7 @@ Baixe o arquivo no repositório ou crie o arquivo `bloqueio_bets_adultos.txt` co
 ⚠️ **Requisito**: Sempre que fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
 
 ---
+---
 ## 🚫 Página Personalizada de Acesso Bloqueado
 
 Adicione no `squid.conf` na linha onde há escrito `error_directory`(Utilize `Ctrl` + `W` para procurar):
@@ -65,6 +67,7 @@ deny_info https://www.acesso-proibido.netlify.app bloqueio_bets_adultos
 ```
 ⚠️ **Requisito**: Sempre que fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
 
+---
 ---
 ## 📝 Registro de Tentativas de Acessos Bloqueados
 
