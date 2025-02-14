@@ -49,7 +49,7 @@ http_access allow all
 Baixe o arquivo no repositório ou crie o arquivo `bloqueio_bets_adultos.txt` com um URL por linha no diretório `/etc/squid/` do servidor: [Lista dos sites bloqueados](https://dontpad.com/bloqueio_sites_bets_adultos).
 
 
-⚠️ **Requisito**: Sempre que adicionar um ACL ou fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
+⚠️ **Requisito**: Sempre que fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
 
 ---
 ## 🚫 Página Personalizada de Acesso Bloqueado
@@ -63,7 +63,7 @@ error_directory /usr/share/squid/errors/Portuguese
 # Redireciona para uma página web customizada ao bloquear uma ACL
 deny_info https://www.acesso-proibido.netlify.app bloqueio_bets_adultos
 ```
-⚠️ **Requisito**: Sempre que adicionar um ACL ou fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
+⚠️ **Requisito**: Sempre que fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
 
 ---
 ## 📝 Registro de Tentativas de Acessos Bloqueados
@@ -84,7 +84,7 @@ sudo touch /var/log/squid/log_acblock
 sudo chown proxy:proxy /var/log/squid/log_acblock
 sudo chmod 640 /var/log/squid/log_acblock
 ```
-⚠️ **Requisito**: Sempre que adicionar um ACL ou fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
+⚠️ **Requisito**: Sempre que fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
 
 Comando para Monitoramento dos Logs:
 ```bash
