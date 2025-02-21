@@ -1,19 +1,10 @@
-# PROJETO SQUID 🦑
-
----
-
-## ⚙️ **REQUISITOS DO PROJETO** 
+# REQUISITOS DO PROJETO SQUID 🦑
 
 Para executar este projeto, são necessários os seguintes requisitos:
 
 💻 **Sistema Operacional:**
 - [Ubuntu 24.04.1](https://ubuntu.com/download/desktop/thank-you?version=24.04.1&architecture=amd64&lts=true) 
 - [Debian 12.9.0](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.9.0-amd64-netinst.iso)
-
-🌐 **Software:**
-- Squid: Versão 6.13 (`apt install squid`)
-- Serviço systemd (`apt install systemd`)
-- Editor de texto (`apt install nano`)
 
 ⚙️ **Hardware Recomendado:**
 - CPU: 2 núcleos (recomendado)
@@ -25,6 +16,11 @@ Para executar este projeto, são necessários os seguintes requisitos:
 
 🔑 **Permissões:**
 - Acesso root ou usuário com permissões sudo. 
+
+🌐 **Software:**
+- Squid: Versão 6.13 (`apt install squid`)
+- Serviço systemd (`apt install systemd`)
+- Editor de texto (`apt install nano`)
 
 📝 **Dependências:**
 - Diretório de logs configurado (`/var/log/squid/`)
