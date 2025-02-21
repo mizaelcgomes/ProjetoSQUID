@@ -11,9 +11,9 @@ Para executar este projeto, são necessários os seguintes requisitos:
 - [Debian 12.9.0](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.9.0-amd64-netinst.iso)
 
 🌐 **Software:**
-- Squid: Versão 6.13
-- Serviço systemd disponível 
-- Editor de texto (nano)
+- Squid: Versão 6.13 (`apt install squid`)
+- Serviço systemd (`apt install systemd`)
+- Editor de texto (`apt install nano`)
 
 ⚙️ **Hardware Recomendado:**
 - CPU: 2 núcleos (recomendado)
@@ -21,7 +21,7 @@ Para executar este projeto, são necessários os seguintes requisitos:
 - Armazenamento: 20GB (recomendado)
 
 🌐 **Conectividade:**
-- Acesso à internet para instalação e atualizações (Modo Bridge)
+- Acesso à internet para instalação e atualizações (Placa de Rede em Modo Bridge)
 
 🔑 **Permissões:**
 - Acesso root ou usuário com permissões sudo. 
