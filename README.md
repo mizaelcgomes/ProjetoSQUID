@@ -60,6 +60,32 @@ sudo systemctl status squid
 ```
 
 ---
+## 🌐 Configuração do Proxy nos Navegadores
+
+Para que o Squid funcione corretamente, é necessário configurar o proxy nos navegadores dos dispositivos que utilizarão o servidor proxy. Abaixo estão as instruções para os navegadores mais comuns:
+
+### **Google Chrome**
+1. Abra as **Configurações** do navegador.
+2. Vá para **Sistema** > **Configurações de proxy**.
+3. Na janela que abrir, configure o proxy manualmente:
+   - **Endereço do proxy**: Insira o IP do servidor onde o Squid está instalado.
+   - **Porta**: `3128` (ou outra porta configurada no Squid).
+4. Salve as alterações.
+
+### **Mozilla Firefox**
+1. Abra o menu (três barras no canto superior direito) e vá para **Configurações**.
+2. Role até a seção **Rede e Internet** e clique em **Configurações de rede**.
+3. Selecione **Configuração manual de proxy**.
+   - **Endereço do proxy HTTP**: Insira o IP do servidor onde o Squid está instalado.
+   - **Porta**: `3128`.
+4. Marque a opção **Usar este servidor proxy para todos os protocolos**.
+5. Clique em **OK** para salvar.
+
+### **Outros Navegadores**
+Se você estiver usando outro navegador, geralmente a configuração do proxy pode ser feita nas **Configurações de Rede** do navegador. Basta seguir os mesmos princípios:
+- **Endereço do proxy**: IP do servidor Squid.
+- **Porta**: `3128`.
+
 ---
 ## 🔒 Bloqueio de Sites de Apostas/Adultos(ACL)
 
