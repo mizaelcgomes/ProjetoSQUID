@@ -1,6 +1,34 @@
-# COMANDOS DO PROJETO SQUID 🦑
+# PROJETO SQUID 🦑
 
-Comando necessários para dar seguimento ao projeto.
+---
+
+## ⚙️ **REQUISITOS DO PROJETO** 
+
+Para executar este projeto, são necessários os seguintes requisitos:
+
+💻 **Sistema Operacional:**
+- [Ubuntu 24.04.1](https://ubuntu.com/download/desktop/thank-you?version=24.04.1&architecture=amd64&lts=true) 
+- [Debian 12.9.0](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.9.0-amd64-netinst.iso)
+
+🌐 **Software:**
+- Squid: Versão 6.13
+- Serviço systemd disponível 
+- Editor de texto (nano)
+
+⚙️ **Hardware Recomendado:**
+- CPU: 2 núcleos (recomendado)
+- RAM: 4GB (recomendado)
+- Armazenamento: 20GB (recomendado)
+
+🌐 **Conectividade:**
+- Acesso à internet para instalação e atualizações (Modo Bridge)
+
+🔑 **Permissões:**
+- Acesso root ou usuário com permissões sudo. 
+
+📝 **Dependências:**
+- Diretório de logs configurado (`/var/log/squid/`)
+- Arquivos de configuração acessíveis (`/etc/squid/squid.conf`)
 
 ---
 
