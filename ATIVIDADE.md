@@ -7,7 +7,7 @@
 ### 2. 🔒 **Bloqueio de Domínios Específicos** 
    - Adicionar uma ACL para bloquear sites com domínios `.gov.br`, `.jus.br` e `.ufc.br`.
    - Criar arquivo `sudo nano /etc/squid/bloqueio_site.txt`
-## Observações:
+**Observações:**
 Adicione no `squid.conf` abaixo da linha `include /etc/squid/conf.d/*.conf` (utilize `Ctrl` + `W` para procurar) para bloquear URLs listadas em um arquivo externo:
 
 ```squidconf
