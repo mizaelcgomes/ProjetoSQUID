@@ -112,7 +112,7 @@ Adicione no `squid.conf` abaixo da linha onde há escrito `error_directory`(Util
 error_directory /usr/share/squid/errors/Portuguese
 
 # Redireciona para uma página web customizada ao bloquear uma ACL
-deny_info https://www.acesso-proibido.netlify.app bloqueio_bets_adultos
+deny_info https://www.acesso-proibido.netlify.app acl
 ```
 ⚠️ **Requisito**: Sempre que fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
 
