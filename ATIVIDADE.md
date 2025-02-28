@@ -8,7 +8,7 @@
    - Adicionar uma ACL para bloquear sites com domínios `.gov.br`, `.jus.br` e `.ufc.br`.
    - Criar arquivo `sudo nano /etc/squid/bloqueio_site.txt`
 
-**Exemplo:**
+**EXEMPLO:**
 Adicione no `squid.conf` abaixo da linha `include /etc/squid/conf.d/*.conf` (utilize `Ctrl` + `W` para procurar) para bloquear URLs listadas em um arquivo externo:
 
 ```squidconf
@@ -28,7 +28,7 @@ http_access allow all
      - `%{Referer}>h`: Referência (site de origem) da solicitação
      - `%{User-Agent}>h`: Agente do usuário (navegador)
 
-**Exemplo:**
+**EXEMPLO:**
 Adicione no `squid.conf` abaixo da linha `http_port 3128` (utilize `Ctrl` + `W` para procurar)
 ```squidconf
 # Formato personalizado para logs de bloqueio
@@ -60,8 +60,7 @@ tail -f /var/log/squid/log_acblock
      - **Porta**: `3128`.
 
 **EXEMPLO:**
-
-### **Mozilla Firefox**
+**Mozilla Firefox**
 1. Abra o menu (três barras no canto superior direito) e vá para **Configurações**.
 2. Role até a seção **Rede e Internet** e clique em **Configurações de rede**.
 3. Selecione **Configuração manual de proxy**.
