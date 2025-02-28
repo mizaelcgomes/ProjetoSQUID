@@ -16,6 +16,8 @@ acl bloqueio_bets_adultos url_regex -i "/etc/squid/bloqueio_bets_adultos.txt"
 http_access deny bloqueio_bets_adultos
 http_access allow all
 ```
+- Criar arquivo e inserir as URLs `sudo nano /etc/squid/bloqueio_bets_adultos.txt`
+- Ative a permissão do arquivo com `sudo chmod 640 /etc/squid/bloqueio_bets_adultos.txt`
 
 ### 3. 🚫 **Página de Acesso Restrito**
    - Configurar uma página personalizada de acesso bloqueado usando a URL: [https://acessorestrito-squid.netlify.app/](https://acessorestrito-squid.netlify.app/). 🌐  
