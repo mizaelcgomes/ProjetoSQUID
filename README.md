@@ -3,7 +3,6 @@
 Para executar este projeto, são necessários os seguintes requisitos:
 
 💻 **Sistema Operacional:**
-- [Ubuntu 24.04.1](https://ubuntu.com/download/desktop/thank-you?version=24.04.1&architecture=amd64&lts=true) 
 - [Debian 12.9.0](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.9.0-amd64-netinst.iso)
 
 ⚙️ **Hardware Recomendado:**
@@ -89,7 +88,7 @@ Se você estiver usando outro navegador, geralmente a configuração do proxy po
 ---
 ## 🔒 Bloqueio de Sites de Apostas/Adultos(ACL)
 
-Adicione no `squid.conf` a partir da linha "INSERT YOUR OWN RULE"(utilize `Ctrl` + `W` para procurar) para bloquear URLs listadas em um arquivo externo:
+Adicione no `squid.conf` abaixo da linha `include /etc/squid/conf.d/*.conf` (utilize `Ctrl` + `W` para procurar) para bloquear URLs listadas em um arquivo externo:
 
 ```squidconf
 acl bloqueio_bets_adultos url_regex -i "/etc/squid/bloqueio_bets_adultos.txt"
@@ -98,7 +97,7 @@ http_access allow all
 ```
 ### Observações:
 Baixe o arquivo no repositório ou crie o arquivo `bloqueio_bets_adultos.txt` com um URL por linha no diretório `/etc/squid/` do servidor: [Lista dos sites bloqueados](https://dontpad.com/bloqueio_sites_bets_adultos).
-
+Ative a permissão do arquivo com `sudo chmod 640 /etc/squid/bloqueio_bets_adultos.txt`
 
 ⚠️ **Requisito**: Sempre que fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
 
@@ -106,7 +105,7 @@ Baixe o arquivo no repositório ou crie o arquivo `bloqueio_bets_adultos.txt` co
 ---
 ## 🚫 Página Personalizada de Acesso Bloqueado
 
-Adicione no `squid.conf` na linha onde há escrito `error_directory`(Utilize `Ctrl` + `W` para procurar):
+Adicione no `squid.conf` abaixo da linha onde há escrito `error_directory`(Utilize `Ctrl` + `W` para procurar):
 
 ```squidconf
 # Define o diretório de erros em Português
@@ -121,7 +120,7 @@ deny_info https://www.acesso-proibido.netlify.app bloqueio_bets_adultos
 ---
 ## 📝 Registro de Tentativas de Acessos Bloqueados
 
-Adicione no `squid.conf` a partir da linha 2114(utilize `Ctrl` + `/` para encontrar)
+Adicione no `squid.conf` abaixo da linha `http_port 3128` (utilize `Ctrl` + `W` para procurar)
 ```squidconf
 # Formato personalizado para logs de bloqueio
 logformat logblock %>a %ui %un [%{%Y-%m-%d %H:%M:%S}tl] "%rm %ru HTTP/%rv" %Hs %<st "%{Referer}>h" "%{User-Agent}>h"
