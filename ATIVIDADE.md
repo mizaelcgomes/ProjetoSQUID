@@ -59,6 +59,17 @@ tail -f /var/log/squid/log_acblock
      - **Endereço do proxy**: Insira o IP do servidor.
      - **Porta**: `3128`.
 
+**EXEMPLO:**
+
+### **Mozilla Firefox**
+1. Abra o menu (três barras no canto superior direito) e vá para **Configurações**.
+2. Role até a seção **Rede e Internet** e clique em **Configurações de rede**.
+3. Selecione **Configuração manual de proxy**.
+   - **Endereço do proxy HTTP**: Insira o IP do servidor onde o Squid está instalado.
+   - **Porta**: `3128`.
+4. Marque a opção **Usar este servidor proxy para todos os protocolos**.
+5. Clique em **OK** para salvar.
+
 ### 5. ⚡ **Reinicialização do Serviço**
    - Sempre que fizer alterações no arquivo `squid.conf`, reiniciar o servidor usando o comando:  
      ```bash
