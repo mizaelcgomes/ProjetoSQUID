@@ -7,6 +7,14 @@
 ### 2. 🔒 **Bloqueio de Domínios Específicos** 
    - Adicionar uma ACL para bloquear sites com domínios `.gov.br`, `.jus.br` e `.ufc.br`.
    - Criar arquivo `sudo nano /etc/squid/bloqueio_site.txt`
+## Observações:
+Adicione no `squid.conf` abaixo da linha `include /etc/squid/conf.d/*.conf` (utilize `Ctrl` + `W` para procurar) para bloquear URLs listadas em um arquivo externo:
+
+```squidconf
+acl bloqueio_bets_adultos url_regex -i "/etc/squid/bloqueio_bets_adultos.txt"
+http_access deny bloqueio_bets_adultos
+http_access allow all
+```
 
 ### 3. 🚫 **Página de Acesso Restrito**
    - Configurar uma página personalizada de acesso bloqueado usando a URL: [https://acessorestrito-squid.netlify.app/](https://acessorestrito-squid.netlify.app/). 🌐  
