@@ -96,10 +96,13 @@ http_access deny bloqueio_bets_adultos
 http_access allow all
 ```
 ### Observações:
-Baixe o arquivo no repositório ou crie o arquivo `bloqueio_bets_adultos.txt` com um URL por linha no diretório `/etc/squid/` do servidor: [Lista dos sites bloqueados](https://dontpad.com/bloqueio_sites_bets_adultos).
+Baixe o arquivo `bloqueio_bets_adultos.txt` no repositório ou crie o arquivo `bloqueio_bets_adultos.txt` com um URL por linha no diretório `/etc/squid/` do servidor: [Lista dos sites bloqueados](https://dontpad.com/bloqueio_sites_bets_adultos).
+- Entrar no diretório de Download ao baixar o arquivo utilizando o comando `cd Downloads`.
+- Em seguida mover o arquivo para /etc/squid/: `mv bloqueio_bets_adultos.txt /etc/squid/`.
 
-- Criar arquivo e inserir as URLs `sudo nano /etc/squid/bloqueio_bets_adultos.txt`
-- Ative a permissão do arquivo com `sudo chmod 640 /etc/squid/bloqueio_bets_adultos.txt`
+Caso não tenha baixado o arquivo e deseja criar:
+- Criar arquivo e inserir as URLs `sudo nano /etc/squid/bloqueio_bets_adultos.txt`.
+- Ative a permissão do arquivo com `sudo chmod 640 /etc/squid/bloqueio_bets_adultos.txt`.
 
 ⚠️ **Requisito**: Sempre que fizer alteração, reiniciar o servidor usando o comando `sudo systemctl restart squid`.
 
